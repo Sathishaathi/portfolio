@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply m-0 font-sans antialiased bg-black text-white overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1600px] mx-auto;
+  }
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent;
+}
+
+/* Custom cursor */
+.custom-cursor {
+  @apply fixed w-8 h-8 rounded-full border border-white pointer-events-none mix-blend-difference z-50;
+  transform: translate(-50%, -50%);
+}
